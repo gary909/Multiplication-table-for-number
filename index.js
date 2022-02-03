@@ -1,8 +1,13 @@
 function multiTable(number) {
-    for (var i = 1; i <= 10; i++ ) {
-        return `${i} * ${number} = ${i * number}`;
+    var msg = "";
+    for (var i = 1; i <= 9; i++ ) {
+        msg = msg + `${i} * ${number} = ${i * number}\n`;
+        if (i == 9) {
+            i = i + 1;
+            msg = msg + `${i } * ${number} = ${i * number}`;
+        }
     }
-    // return number;
+    return msg;
 }
 
 console.log(multiTable(5)); // return '1 * 5 = 5\n2 * 5 = 10\n3 * 5 = 15\n4 * 5 = 20\n5 * 5 = 25\n6 * 5 = 30\n7 * 5 = 35\n8 * 5 = 40\n9 * 5 = 45\n10 * 5 = 50'
